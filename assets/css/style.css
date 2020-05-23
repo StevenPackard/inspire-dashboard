@@ -133,6 +133,7 @@ display: none;
 }
 
 .small-picture{
+  background-image: url(https://13thdimension.com/wp-content/uploads/2018/06/incredible-hulk-lou-ferrigno-trump-physical-fitness-council-1503700217.jpg);
   height: 15vh;
   width: 15vh;
   border-radius: 50%;
@@ -140,7 +141,7 @@ display: none;
   background-size: cover;
   margin-bottom: 20rem;
   margin-right: 7rem;
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.40);
-  border: 2px solid black;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.40);
+  border: 5px solid black;
 }
 
