@@ -17,4 +17,13 @@ export default class HeroController {
   getImg() {
     heroService.getImg()
   }
+
+  spin() {
+    let hero = document.getElementById("hero")
+    if (hero.classList.contains("fa-spin")) {
+      hero.classList.remove("fa-spin")
+    } else {
+      hero.classList.add("fa-spin")
+    }
+  }
 }
