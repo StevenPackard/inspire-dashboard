@@ -4,7 +4,6 @@ import store from "../store.js";
 //TODO Create the render function
 function _drawTodos() {
   let todos = store.State.todos
-  console.log(todos, "from the draw function");
   let template = ''
   todos.forEach(t => template += t.Template)
   document.getElementById('todos').innerHTML = template

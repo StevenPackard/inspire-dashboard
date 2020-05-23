@@ -13,7 +13,6 @@ class ImageService {
   }
 
   async getImg() {
-    console.log("Im getting an image");
     let res = await imgApi.get('');
     store.commit('image', res.data)
   }

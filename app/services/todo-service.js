@@ -12,7 +12,6 @@ class TodoService {
     this.getTodos()
   }
   getTodos() {
-    console.log("Getting the Todo List");
     todoApi.get('')
       .then(res => {
         let newTodo = res.data.data.map(nt => new Todo(nt))
@@ -26,7 +25,6 @@ class TodoService {
   }
 
   async addTodoAsync(todo) {
-    console.log(todo, "from the add");
     let res = await todoApi.post("", new Todo(todo));
     this.getTodos()
     console.log(res);
@@ -42,7 +40,6 @@ class TodoService {
       todo.completed = !todo.completed
     }
     let res = await todoApi.put(todoId, todo);
-    console.log(res);
     this.getTodos()
     //TODO do you care about this data? or should you go get something else?
   }

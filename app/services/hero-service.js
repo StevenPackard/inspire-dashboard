@@ -14,7 +14,6 @@ class HeroService {
   }
 
   async getImg() {
-    console.log("Im getting a hero Image");
     let res = await heroApi.get('');
     let heroes = res.data.data.results.map(h => new Hero(h)).filter(h => h.imgURL != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
     store.commit('heroes', heroes)
