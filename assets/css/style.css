@@ -1,0 +1,93 @@
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+body{
+background-image: url(/assets/css/5417.jpg);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.header-tall{
+height: 15vh;
+}
+.bottom-tall{
+  height: 25vh;
+}
+.tall-row{
+  height: 60vh;
+}
+
+.action{
+  cursor: pointer;
+}
+
+.time-box{
+height: 50vh;
+background-position: center;
+background-size: cover;
+}
+
+.quote-hide{
+display: none;
+}
+
+.quote-box:hover .quote-hide{
+  display: block;
+}
+
+.post-it{
+  height: 20vh;
+  background-color: #FCEA66;
+  border-radius: 5px;
+}
+.post-it-list{
+  height: 40vh;
+  background-color: #FCEA66;
+  border-radius: 5px;
+}
+.post-it-bottom{
+  height: 20vh;
+  background-color: #FCEA66;
+  border-radius: 5px;
+}
+
+.overflow-content{
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+}
+
+.tall-stuff{
+  height: 20vh;
+}
+
+.push-down{
+  margin-top: 9rem;
+}
+.push-down-far{
+  margin-top: 28rem;
+}
+
+.image-push{
+  margin-left: 5%;
+}
+
+.big-text{
+  font-size: 8rem;
+}
+
+.text-box{
+  height: 10rem;
+}
+
+
