@@ -18,6 +18,10 @@ main{
   flex-grow: 1;
 }
 
+li{
+  list-style-type: none;
+}
+
 .header-tall{
 height: 15vh;
 }
@@ -76,6 +80,11 @@ display: none;
 }
 .push-down-far{
   margin-top: 28rem;
+}
+
+.push-up{
+  margin-top: -25px;
+  margin-right: 10px;
 }
 
 .image-push{

@@ -17,7 +17,7 @@ function _drawWeather() {
 
 function _drawTime() {
   let today = new Date();
-  let h = today.getHours();
+  let h = (today.getHours() < 10 ? '0' : '') + today.getHours();
   let m = (today.getMinutes() < 10 ? '0' : '') + today.getMinutes();
   let mIndex = (today.getMonth() + 1)
   let month = ''
