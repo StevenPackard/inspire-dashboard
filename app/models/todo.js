@@ -1,27 +1,31 @@
 export default class Todo {
   constructor(data) {
     this.id = data._id
-    this.complete = false || data.completed
+    this.completed = data.completed
     this.user = data.user
     this.description = data.name || data.description
+
 
   }
 
 
   get Template() {
-    if (this.complete) {
-      return `<li class="my-2"> 
-      <input checked type="checkbox" id="" class="mr-2" onclick="app.todoController.toggleTodoStatus('${this.id}')">
-      ${this.description}
-      <div class="text-right push-up">
-      <i class="fa text-danger fa-trash action" onclick="app.todoController.removeTodo('${this.id}')" aria-hidden="true"></i>
-      </div>
-    </li>`
+    if (this.completed == true) {
+      return `
+      <li class="my-2 text-slash"> 
+        <input checked type="checkbox" id="" class="mr-2" onchange="app.todoController.toggleTodoStatus('${this.id}')">
+        ${this.description} 
+        <div class="text-right push-up">
+        <i class="fa text-danger fa-trash action" onclick="app.todoController.removeTodo('${this.id}')" aria-hidden="true"></i>
+        </div>
+      </li>`
     }
-    if (this.complete == false) {
+    else {
       return `<li class="my-2"> 
-      <input checked type="checkbox" id="" class="mr-2" onclick="app.todoController.toggleTodoStatus('${this.id}')">
+      <div class="text-box-small">
+      <input type="checkbox" id="" class="mr-2" onchange="app.todoController.toggleTodoStatus('${this.id}')">
       ${this.description}
+      </div>
       <div class="text-right push-up">
       <i class="fa text-danger fa-trash action" onclick="app.todoController.removeTodo('${this.id}')" aria-hidden="true"></i>
       </div>

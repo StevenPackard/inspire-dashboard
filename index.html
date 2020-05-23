@@ -6,17 +6,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Cork It</title>
+	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="text-black text-shadow" id="">
+<body class="text-black" id="">
 
 	<header class="container-fluid header-tall">
 		<div class="row header-tall d-flex flex-column">
+			<div class="col-1 align-self-start text-center post-it post-font">
+				<h3 id="todoTotal"><b></b></h3>
+			</div>
 			<!-- weather -->
-			<div class="col-1 align-self-end text-center action m-5 post-it" id="weather">
+			<div class="col-1 align-self-end text-center action m-5 post-it text-shadow" id="weather">
 
 			</div>
 		</div>
@@ -28,7 +32,7 @@
 			<div class="col-2 top-shadow d-flex flex-column my-4 ml-5">
 				<div class="row h-100">
 					<div class="col-12 d-flex flex-column post-it-list push-down">
-						<h3 class="text-center pb-2">To-do List</h3>
+						<h2 class="text-center pb-2 text-shadow"><b>To-do List</b></h2>
 						<ul class="flex-grow-1 pl-2" id="todos">
 
 						</ul>
@@ -42,26 +46,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-6 image-push time-box shadow text-center text-light " id="bg-image">
-				<div class="push-down">
+			<div class="col-6 image-push time-box shadow text-center text-light action" onclick="app.imageController.getImg()"
+				id="bg-image">
+				<div class="push-down text-shadow-dark">
 					<h1 class="big-text" id="time"><b></b></h1>
 					<h1 id="date"><b></b></h1>
 				</div>
-			</div>
-			<div class="col-1 push-down-far action" onclick="app.imageController.getImg()">
-				<i class="fas fa-2x fa-sync-alt"></i>
 			</div>
 		</div>
 		<!-- clock -->
 
 
-		<div class="row d-flex flex-column fixed-bottom bottom-tall mb-3">
-			<!-- quote -->
-			<div class="col-4 text-center action align-self-center post-it-bottom mt-4" id="quote">
+		<div class="row d-flex flex-column fixed-bottom bottom-tall mb-3 justify-content-center">
 
+			<!-- quote -->
+			<div class="col-3 offset-4 text-center action align-self-center post-it-bottom mt-4 text-shadow"
+				onclick="app.quoteController.getQuote()" id="quote">
 			</div>
-			<div class="text-center">
-				<i class="fas fa-lg fa-sync-alt fixed-bottom mb-2" onclick="app.quoteController.getQuote()"></i>
+			<div class="col-2 align-self-end" id="">
+				<div class="small-picture action" onclick="app.heroController.getImg()" id="heroImg">
+
+				</div>
 			</div>
 		</div>
 	</main>

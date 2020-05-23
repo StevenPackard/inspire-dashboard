@@ -40,6 +40,7 @@ height: 15vh;
 height: 50vh;
 background-position: center;
 background-size: cover;
+border-radius: 5px;
 }
 
 .quote-hide{
@@ -54,16 +55,36 @@ display: none;
   height: 20vh;
   background-color: #FCEA66;
   border-radius: 5px;
+  border-bottom-right-radius: 60px 7px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.40);
+  /* font-family: 'Reenie Beanie', cursive; */
+  font-size: 40px;
+  font-style: bold;
 }
 .post-it-list{
   height: 40vh;
   background-color: #FCEA66;
   border-radius: 5px;
+  border-bottom-right-radius: 60px 7px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.40);
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 20px;
+  font-style: bold;
 }
 .post-it-bottom{
   height: 20vh;
   background-color: #FCEA66;
   border-radius: 5px;
+  border-bottom-right-radius: 60px 7px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.40);
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
+  font-style: bold;
+}
+
+.post-font{
+  font-family: 'Reenie Beanie', cursive;
+  margin: 7rem;
 }
 
 .overflow-content{
@@ -88,7 +109,7 @@ display: none;
 }
 
 .image-push{
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .big-text{
@@ -99,4 +120,27 @@ display: none;
   height: 10rem;
 }
 
+.text-slash{
+  text-decoration: line-through;
+}
+
+.text-shadow-dark{
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.40);
+}
+
+.text-shadow{
+  text-shadow: 2px 2px rgb(209, 209, 58);
+}
+
+.small-picture{
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20rem;
+  margin-right: 7rem;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.40);
+  border: 2px solid black;
+}
 

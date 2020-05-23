@@ -8,6 +8,12 @@ function _drawTodos() {
   let template = ''
   todos.forEach(t => template += t.Template)
   document.getElementById('todos').innerHTML = template
+  let totalTodos = todos.filter(t => t.completed != true)
+  if (todos.length > 1 || totalTodos.length == 0) {
+    document.getElementById('todoTotal').innerText = `${totalTodos.length}` + ' things left to do!'
+  } else {
+    document.getElementById('todoTotal').innerText = `${totalTodos.length}` + ' thing left to do!'
+  }
 }
 
 export default class TodoController {

@@ -8,6 +8,7 @@ let _state = {
   todos: [],
   image: {},
   quote: {},
+  heroes: []
 };
 
 /** Collection of listeners to be called based on keyed state changes
@@ -17,7 +18,8 @@ let _listeners = {
   weather: [],
   todos: [],
   image: [],
-  quote: []
+  quote: [],
+  heroes: []
 };
 
 /**

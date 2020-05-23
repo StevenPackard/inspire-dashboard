@@ -10,7 +10,7 @@ export default class Quote {
     return `
     <div class="quote-box overflow-content tall-stuff">
     <h3 class="overflow-content text-box"><b>"${this.quote}"</b></h3>
-    <h5 class="quote-hide">- ${this.author}</h5>
+    <h5 class="quote-hide">-<b>${this.author}</b></h5>
     </div>
     `
   }
