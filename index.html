@@ -33,8 +33,7 @@
 				<div class="row h-100">
 					<div class="col-12 d-flex flex-column post-it-list push-down">
 						<h2 class="text-center pb-2 text-shadow"><b>To-do List</b></h2>
-						<ul class="flex-grow-1 pl-2" id="todos">
-
+						<ul class="flex-grow-1 pl-2 overflow-list" id="todos">
 						</ul>
 						<form class="justify-self-end" onsubmit="app.todoController.addTodo(event)">
 							<div class="form-group d-flex">
@@ -43,6 +42,8 @@
 								<button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
 							</div>
 						</form>
+						<button class="btn btn-outline-danger delete-button mb-3"
+							onclick="app.todoController.removeCheckedTodos()">Delete Completed Todos</button>
 					</div>
 				</div>
 			</div>

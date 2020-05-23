@@ -52,6 +52,16 @@ class TodoService {
     let res = await todoApi.delete(todo.id)
     this.getTodos()
   }
+
+  async removeCheckedTodos() {
+    let todos = store.State.todos
+    let checked = todos.filter(t => t.completed == true)
+    for (let i = 0; i < checked.length; i++) {
+      let todo = checked[i]
+      let res = await todoApi.delete(todo.id)
+    }
+    this.getTodos()
+  }
 }
 
 const todoService = new TodoService();

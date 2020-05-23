@@ -41,4 +41,8 @@ export default class TodoController {
   removeTodo(todoId) {
     TodoService.removeTodoAsync(todoId);
   }
+
+  removeCheckedTodos() {
+    TodoService.removeCheckedTodos()
+  }
 }

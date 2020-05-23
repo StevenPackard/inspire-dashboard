@@ -88,9 +88,16 @@ display: none;
 }
 
 .overflow-content{
-  text-overflow: ellipsis;
   overflow-y: hidden;
 }
+.overflow-content:hover{
+  overflow-y: auto;
+}
+
+.overflow-list{
+  overflow-y: auto;
+}
+
 
 .tall-stuff{
   height: 20vh;
@@ -143,5 +150,9 @@ display: none;
   margin-right: 7rem;
   box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.40);
   border: 5px solid black;
+}
+
+.delete-button{
+  width: 100%;
 }
 
