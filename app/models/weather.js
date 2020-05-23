@@ -25,8 +25,8 @@ export default class Weather {
 
   get Template2() {
     return `
-    <h4 onclick="app.weatherController.switchTempF()"><i class="fas fa-cloud"></i> ${this.tempC}°</h4>
-				<h5>${this.city}</h5>
+    <h4 onclick="app.weatherController.switchTempF()"><i class="fas fa-cloud"></i><b> ${this.tempC}</b>°</h4>
+				<h5><b>${this.city}<b></h5>
     `
   }
 }
