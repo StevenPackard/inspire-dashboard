@@ -7,19 +7,18 @@ const heroApi = axios.create({
   timeout: 8000
 });
 
-//TODO create methods to retrieve data trigger the update window when it is complete
+
 class HeroService {
   constructor() {
     this.getImg();
   }
 
+  // Get image from Marvel api and commit to store as class Hero
   async getImg() {
     let res = await heroApi.get('');
     let heroes = res.data.data.results.map(h => new Hero(h)).filter(h => h.imgURL != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
     store.commit('heroes', heroes)
   }
-
-
 }
 
 const heroService = new HeroService();

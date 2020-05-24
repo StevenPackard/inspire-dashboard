@@ -8,6 +8,8 @@ const weatherApi = axios.create({
 });
 
 class WeatherService {
+
+  // Get weather from sandbox
   async getWeather() {
     let res = await weatherApi.get();
     store.commit("weather", new Weather(res.data));

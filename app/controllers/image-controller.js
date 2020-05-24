@@ -13,6 +13,7 @@ export default class ImageController {
     store.subscribe('image', _drawImg)
   }
 
+  // get image from sandbox
   getImg() {
     imageService.getImg()
   }

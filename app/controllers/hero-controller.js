@@ -1,6 +1,7 @@
 import store from "../store.js";
 import heroService from "../services/hero-service.js";
 
+// Draw Hero image to pin
 function _drawImg() {
   let hero = store.State.heroes[Math.floor(Math.random() * store.State.heroes.length)];
   let heroImg = hero.imgURL
@@ -13,10 +14,12 @@ export default class HeroController {
     store.subscribe('heroes', _drawImg)
   }
 
+  // get image from Marvel api
   getImg() {
     heroService.getImg()
   }
 
+  // Add/remove spin on pin
   spin() {
     let hero = document.getElementById("hero")
     if (hero.classList.contains("fa-spin")) {

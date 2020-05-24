@@ -13,22 +13,22 @@
 </head>
 
 <body class="text-black" id="">
-
+	<!-- TodoTotal & Weather -->
 	<header class="container-fluid header-tall">
 		<div class="row header-tall d-flex flex-column">
+			<!-- TodoTotal -->
 			<div class="col-1 align-self-start text-center post-it post-font">
 				<h3 id="todoTotal"><b></b></h3>
 			</div>
-			<!-- weather -->
+			<!-- Weather -->
 			<div class="col-1 align-self-end text-center action m-5 post-it text-shadow" id="weather">
-
 			</div>
 		</div>
 	</header>
-
 	<main class="container-fluid">
-
+		<!-- Todo List & Large Image & Clock -->
 		<div class="row d-flex flex-row tall-row">
+			<!-- Todo List -->
 			<div class="col-2 top-shadow d-flex flex-column my-4 ml-5">
 				<div class="row h-100">
 					<div class="col-12 d-flex flex-column post-it-list push-down">
@@ -47,23 +47,23 @@
 					</div>
 				</div>
 			</div>
+			<!-- Large Image -->
 			<div class="col-6 image-push time-box shadow text-center text-light action" onclick="app.imageController.getImg()"
 				id="bg-image">
+				<!-- clock -->
 				<div class="push-down text-shadow-dark">
 					<h1 class="big-text" id="time"><b></b></h1>
 					<h1 id="date"><b></b></h1>
 				</div>
 			</div>
 		</div>
-		<!-- clock -->
-
-
+		<!-- Quote & Hero Pin -->
 		<div class="row d-flex flex-column fixed-bottom bottom-tall mb-3 justify-content-center">
-
 			<!-- quote -->
 			<div class="col-3 offset-4 text-center action align-self-center post-it-bottom mt-4 text-shadow"
 				onclick="app.quoteController.getQuote()" id="quote">
 			</div>
+			<!-- Hero Pin -->
 			<div class="col-2 align-self-end" id="">
 				<div class="small-picture action" onclick="app.heroController.spin()" id="hero">
 
@@ -71,20 +71,6 @@
 			</div>
 		</div>
 	</main>
-
-
-
-
-	<!-- <footer class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-4 post-it-bottom text-center">
-				<div class="action" id="quote">
-
-				</div>
-			</div>
-		</div>
-	</footer> -->
-
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

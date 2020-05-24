@@ -7,18 +7,17 @@ const _quoteApi = axios.create({
   timeout: 3000
 });
 
-//TODO create methods to retrieve data trigger the update window when it is complete
+
 class QuoteService {
   constructor() {
     this.getQuote()
   }
 
+  // get quote from sandbox and commit to store
   async getQuote() {
     let res = await _quoteApi.get('')
     store.commit("quote", new Quote(res.data.quote))
   }
-
-
 }
 
 const quoteService = new QuoteService();

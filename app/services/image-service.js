@@ -6,18 +6,17 @@ const imgApi = axios.create({
   timeout: 8000
 });
 
-//TODO create methods to retrieve data trigger the update window when it is complete
+
 class ImageService {
   constructor() {
     this.getImg();
   }
 
+  // Get image from sandbox and commit to store
   async getImg() {
     let res = await imgApi.get('');
     store.commit('image', res.data)
   }
-
-
 }
 
 const imageService = new ImageService();

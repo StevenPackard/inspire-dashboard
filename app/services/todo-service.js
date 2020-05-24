@@ -7,10 +7,12 @@ const todoApi = axios.create({
   timeout: 8000
 });
 
+
 class TodoService {
   constructor() {
     this.getTodos()
   }
+  // Get todos from sandbox and add them to store as class Todo
   getTodos() {
     todoApi.get('')
       .then(res => {
@@ -21,9 +23,9 @@ class TodoService {
     // console.log(res.data.data)
     // store.commit('todos', new Todo(res.data.data));
     // console.log(store.State.todos);
-
   }
 
+  // Add new Todo to sandbox
   async addTodoAsync(todo) {
     let res = await todoApi.post("", new Todo(todo));
     this.getTodos()
@@ -31,6 +33,7 @@ class TodoService {
 
   }
 
+  // Toggle between checked/unchecked
   async toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
     //TODO Make sure that you found a todo,
@@ -44,6 +47,7 @@ class TodoService {
     //TODO do you care about this data? or should you go get something else?
   }
 
+  // Remove single Todo by id
   async removeTodoAsync(todoId) {
     //TODO Work through this one on your own
     //		what is the request type
@@ -53,6 +57,7 @@ class TodoService {
     this.getTodos()
   }
 
+  // Remove all Todos that are checked
   async removeCheckedTodos() {
     let todos = store.State.todos
     let checked = todos.filter(t => t.completed == true)

@@ -1,7 +1,7 @@
 import TodoService from "../services/todo-service.js";
 import store from "../store.js";
 
-//TODO Create the render function
+// Draw Todos on the list
 function _drawTodos() {
   let todos = store.State.todos
   let template = ''
@@ -17,11 +17,11 @@ function _drawTodos() {
 
 export default class TodoController {
   constructor() {
-    //TODO Remember to register your subscribers
     TodoService.getTodos();
     store.subscribe('todos', _drawTodos)
   }
 
+  // Take in form data and push to Service 
   addTodo(event) {
     event.preventDefault();
     let form = event.target;
@@ -32,16 +32,17 @@ export default class TodoController {
     TodoService.addTodoAsync(todo);
   }
 
-  //NOTE This method will pass an Id to your service for the TODO that will need to be toggled
+  // Push id to service to toggle todo complete/incomplete
   toggleTodoStatus(todoId) {
     TodoService.toggleTodoStatusAsync(todoId);
   }
 
-  //NOTE This method will pass an Id to your service for the TODO that will need to be deleted
+  // push id to service to remove todo from list
   removeTodo(todoId) {
     TodoService.removeTodoAsync(todoId);
   }
 
+  // remove all checked todos
   removeCheckedTodos() {
     TodoService.removeCheckedTodos()
   }
