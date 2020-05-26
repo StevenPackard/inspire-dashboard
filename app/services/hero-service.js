@@ -16,7 +16,7 @@ class HeroService {
   // Get image from Marvel api and commit to store as class Hero
   async getImg() {
     let res = await heroApi.get('');
-    let heroes = res.data.data.results.map(h => new Hero(h)).filter(h => h.imgURL != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg")
+    let heroes = res.data.data.results.map(h => new Hero(h)).filter(h => h.imgURL != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg");
     store.commit('heroes', heroes)
   }
 }
